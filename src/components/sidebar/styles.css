@@ -5,6 +5,7 @@
     padding: 1em 0em;
     border-right: solid 1px #cacaca;
     justify-content: space-between;
+    height: 90vh;
 }
 
 .t-icon-container{

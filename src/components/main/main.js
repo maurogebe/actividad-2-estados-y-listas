@@ -1,6 +1,6 @@
 import React from 'react';
-import PrimaryCol from '../primaryCol/primary-col';
-import SidebarCol from '../sidebarCol/sidebar-col';
+import PrimaryCol from './primaryCol/primary-col';
+import SidebarCol from './sidebarCol/sidebar-col';
 
 const Main = (props) => {
     return (

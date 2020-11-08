@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from '../icon/icon';
-import Logo from '../logo';
+import Icon from '../global/icon/icon';
+import Logo from '../global/logo';
 import {
     HomeSolid,
     HashtagOutline,
@@ -9,7 +9,7 @@ import {
     UserOutline,
     DotsCircleHorizontalOutline
 } from "@graywolfai/react-heroicons";
-import Account from '../account/account';
+import Account from './account/account';
 import './styles.css';
 
 const Sidebar = (props) => {

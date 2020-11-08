@@ -1,6 +1,7 @@
 const feed = [
     {
         profile: "AJ + Español",
+        profileName: "https://i.imgur.com/QJruc0xm.png",
         username: "ajplusespanol",
         content: `Laika fue elegida para viajar al espacio sabiendo que no resistiría.
         ¿Son éticas nuestras maneras de hacer ciencia? 
@@ -16,6 +17,7 @@ const feed = [
     },
     {
         profile: "Elon Musk",
+        profileName: "https://i.imgur.com/rNMKJSQl.jpg",
         username: "elonmusk",
         content: `Several thousand more Starlink beta participation invitations going out this week.
         `,
@@ -29,6 +31,7 @@ const feed = [
     },
     {
         profile: "Google",
+        profileName: "https://i.imgur.com/xosRXkNl.jpg",
         username: "google",
         content: `20 years ago today the first crew of astronauts and researchers arrived at the International Space Station, forever changing how we explore space. Cohete Celebrate #SpaceStation20th with @NASA
         & @GoogleArts by exploring a 3D model of the`,
@@ -42,6 +45,7 @@ const feed = [
     },
     {
         profile: "LeBron James",
+        profileName: "https://i.imgur.com/d7KVNXwl.jpg",
         username: "KingJames",
         content: `Y’all see the setup right???!!!`,
         interaction: {
@@ -54,6 +58,7 @@ const feed = [
     },
     {
         profile: "BBC Breaking News",
+        profileName: "https://i.imgur.com/YbqahGPl.jpg",
         username: "BBCBreaking",
         content: `Prince William contracted Covid-19 in April at a similar time to his father Prince Charles, palace sources tell BBC
         `,
@@ -67,6 +72,7 @@ const feed = [
     },
     {
         profile: "NVIDIA GeForce",
+        profileName: "https://i.imgur.com/Agv0nC3l.jpg",
         username: "NVIDIAGeForce",
         content: `Hitch a ride on the RTX Battle Bus!
         Experience Fortnite in a new light with NVIDIA ray traced shadows, global illumination and ambient occlusion. 
@@ -81,6 +87,7 @@ const feed = [
     },
     {
         profile: "National Geographic",
+        profileName: "https://i.imgur.com/3nwHKzRl.jpg",
         username: "NatGeo",
         content: `What's the most soothing experience you've had in nature? (Bonus points if you have a photo or video)`,
         interaction: {
@@ -93,6 +100,7 @@ const feed = [
     },
     {
         profile: "Hipertextual",
+        profileName: "https://i.imgur.com/w8FdS5Pl.jpg",
         username: "Hipertextual",
         content: `Cinco recomendaciones, y una sorpresa, para ver en Netflix en noviembre`,
         interaction: {
@@ -105,6 +113,7 @@ const feed = [
     },
     {
         profile: "Hipertextual",
+        profileName: "https://i.imgur.com/w8FdS5Pl.jpg",
         username: "Hipertextual",
         content: `Cinco recomendaciones, y una sorpresa, para ver en Netflix en noviembre`,
         interaction: {
@@ -116,6 +125,7 @@ const feed = [
         blocked: false
     },{
         profile: "Real Madrid C.F.",
+        profileName: "https://i.imgur.com/6kZ2yA5l.jpg",
         username: "realmadrid",
         content: `¡El capitán, @SergioRamos, alcanza la cifra de 1️⃣0️⃣0️⃣ goles con la camiseta del 
         @RealMadrid! #RealFootball | #HalaMadrid`,
@@ -129,6 +139,7 @@ const feed = [
     },
     {
         profile: "UEFA Champions League",
+        profileName: "https://i.imgur.com/rs0iJu3l.jpg",
         username: "ChampionsLeague",
         content: `Bayern have won their last 13 Champions League games... #UCL`,
         interaction: {
@@ -141,6 +152,7 @@ const feed = [
     },
     {
         profile: "FC Barcelona",
+        profileName: "https://i.imgur.com/9IlaO4rl.jpg",
         username: "FCBarcelona_es",
         content: `¡La 
         @LigadeCampeones no se detiene!
@@ -156,6 +168,7 @@ const feed = [
     },
     {
         profile: "Youtube",
+        profileName: "https://i.imgur.com/jCaFJzUl.jpg",
         username: "Youtube",
         content: `Drop links to the videos that are helping you right now`,
         interaction: {

@@ -1,6 +1,6 @@
 import React from 'react';
-import PostTweet from '../postTweet/post-tweet';
-import Feed from '../feed';
+import PostTweet from './postTweet/post-tweet';
+import Feed from './feed/feed';
 
 const PrimaryCol = (props) => {
     return (
