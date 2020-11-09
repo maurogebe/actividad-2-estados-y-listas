@@ -1,0 +1,16 @@
+.t-col-container {
+    margin-right: 10px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.t-col-container::-webkit-scrollbar {
+    width: 0.5rem;
+}
+.t-col-container::-webkit-scrollbar-track {
+    background: white;
+}
+.t-col-container::-webkit-scrollbar-thumb {
+    background: rgb(29, 161, 242);
+    border-radius: 5px;
+}

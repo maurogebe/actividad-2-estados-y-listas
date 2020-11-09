@@ -2,6 +2,9 @@ import React from 'react';
 import PostTweet from './postTweet/post-tweet';
 import Feed from './feed/feed';
 
+// Importando estilos
+import './styles.css'
+
 const PrimaryCol = (props) => {
     return (
         <div className="t-col-container">
