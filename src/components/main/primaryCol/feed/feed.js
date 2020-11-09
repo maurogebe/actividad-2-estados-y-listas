@@ -10,7 +10,6 @@ class Feed extends React.Component {
         super();
         this.state = {
             tweets: feed,
-            // iconList: faComment
         }
     }
 

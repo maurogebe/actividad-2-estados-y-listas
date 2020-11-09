@@ -1,0 +1,28 @@
+.container-search {
+    position: relative;
+    margin-top: 1em;
+}
+.container-search__icon {
+    position: absolute;
+    width: 20px;
+    top: 7px;
+    left: 8px;
+}
+.container-search__icon > svg {
+    color: #14171a85;
+}
+.container-search__icon:hover {
+    background-color: transparent;
+    cursor: default;
+}
+.container-search__icon:hover > svg {
+    color:  #14171a85;
+}
+.container-search__input {
+    width: 100%;
+    border-radius: 25px;
+    height: 35px;
+    padding: 0 30px;
+    background: #0d54742b;
+    border: none;
+}

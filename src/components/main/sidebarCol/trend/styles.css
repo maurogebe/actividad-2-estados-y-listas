@@ -1,0 +1,70 @@
+.trend {
+    padding: 10px;
+    border-bottom: 1px solid #00000030;
+}
+.trend__category {
+    margin: 0;
+    color: #00000057;
+    font-weight: normal;
+    position: relative;
+}
+.trend__icon {
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.trend__icon:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+.trend__icon:hover > svg {
+    color: black;
+}
+.trend__title {
+    margin: 4px 0;
+    font-weight: bold;
+}
+.trend__number-tweets {
+    margin: 0;
+    color: #00000057;
+    font-weight: 600;
+}
+
+
+/* Estilos de Trend Live */
+.trend-live {
+    padding: 10px;
+    border-bottom: 1px solid #00000030;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.trend-live__category {
+    margin: 0;
+    color: #00000057;
+    font-weight: normal;
+    position: relative;
+}
+.trend-live__live {
+    background-color: #d00303;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    color: white;
+}
+.trend-live__img {
+    width: 100%;
+    border-radius: 10px;
+}
+.trend-live__title {
+    margin: 4px 0;
+    font-weight: bold;
+}
+.trend-live__category {
+    margin: 0;
+    color: #00000057;
+    font-weight: 600;
+}
+.trend-live__category-special {
+    color: #006dff;
+}

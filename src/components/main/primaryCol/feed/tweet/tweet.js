@@ -75,7 +75,8 @@ class Tweet extends React.Component{
                                     let nameInteraction = positionNameInteraction[index]
                                     return (
                                         <div>
-                                            <Icon source={icon} quantityInteraction={this.quantityMoreMil(this.props.interaction[nameInteraction])} />
+                                            <Icon source={icon} />
+                                            <span className="t-icon__quantity">{this.quantityMoreMil(this.props.interaction[nameInteraction])}</span>
                                         </div>
                                     )
                                 })

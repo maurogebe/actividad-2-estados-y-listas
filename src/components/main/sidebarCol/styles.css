@@ -1,0 +1,15 @@
+.container-sidebar-col {
+    width: 40%;
+    text-align: initial;
+}
+.container-trend {
+    background: #0d547417;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.container-trend__title {
+    margin: 0;
+    border-bottom: 1px solid #00000030;
+    padding: 10px;
+}

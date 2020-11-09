@@ -75,4 +75,12 @@
     cursor: pointer;
     transition: .2s all;
     border-radius: 50%;
+    position: relative;
+}
+.t-icon__quantity {
+    position: absolute;
+    top: 11px;
+    margin-left: 17px;
+    width: 60px;
+    text-align: initial;
 }

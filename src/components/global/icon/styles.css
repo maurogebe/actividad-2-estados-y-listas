@@ -1,6 +1,3 @@
-.t-icon {
-    position: relative;
-}
 .t-icon > svg{
     color: rgb(20, 23, 26);
 }
@@ -13,11 +10,4 @@
 
 .t-icon:hover > svg{
     color: rgba(29,161,242,1.00);
-}
-.t-icon__quantity {
-    position: absolute;
-    bottom: 4px;
-    margin-left: 5px;
-    width: 60px;
-    text-align: initial;
 }

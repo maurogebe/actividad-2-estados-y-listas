@@ -3,9 +3,8 @@ import './styles.css';
 
 const Icon = (props) => {
     return (
-        <div className={`t-icon ${props.iconModifier}`} id={props.id}>
+        <div className={`t-icon ${props.iconModifier}`}>
             {props.source}
-            <span className="t-icon__quantity">{props.quantityInteraction}</span>
         </div>
     )
 }
