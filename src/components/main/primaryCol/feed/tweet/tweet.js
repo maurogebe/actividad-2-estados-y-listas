@@ -35,10 +35,6 @@ class Tweet extends React.Component{
         return property
     }
 
-    // removeClass = (id, className) => {
-    //     const removeClass = document.getElementById(id)
-    //     removeClass.classList.remove(className)
-    // }
 
     render(){
 
@@ -75,17 +71,14 @@ class Tweet extends React.Component{
                                     let nameInteraction = positionNameInteraction[index]
                                     return (
                                         <div>
-                                            <Icon source={icon} />
+                                            <div onClick={() => this.props.function(this.props.index, positionNameInteraction[index])}>
+                                                <Icon source={icon} />
+                                            </div>
                                             <span className="t-icon__quantity">{this.quantityMoreMil(this.props.interaction[nameInteraction])}</span>
                                         </div>
                                     )
                                 })
                             }
-                            {/* {
-                                this.props.interaction.map( i => {
-                                    <span>{i}</span>
-                                })
-                            } */}
                     </div>
                 </div>
             </div>

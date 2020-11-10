@@ -2,8 +2,6 @@ import React from "react";
 import Tweet from "./tweet/tweet";
 import {feed} from '../../../../source';
 
-// Importando iconos
-// import { faComment } from '@fortawesome/free-regular-svg-icons'
 
 class Feed extends React.Component {
     constructor() {
@@ -13,21 +11,20 @@ class Feed extends React.Component {
         }
     }
 
-    render() {
+    clickInteraction = (index, interaction) => {
+        const cloneTweets = JSON.parse(JSON.stringify(this.state.tweets))
+        cloneTweets[index].interaction[interaction]++
+        this.setState({
+            tweets: cloneTweets
+        })
+    }
 
-        const {profile, profileName, username, content, display, interaction} = {
-            profile: "",
-            profileName: "",
-            username: "",
-            content: "",
-            display: "",
-            interaction: ""
-        };
+    render() {
 
         return (
             <div>
                 {
-                    this.state.tweets.map( tweet => {
+                    this.state.tweets.map((tweet, index) => {
                         return (
                             <Tweet
                                 profile={tweet.profile}
@@ -35,14 +32,12 @@ class Feed extends React.Component {
                                 username={tweet.username}
                                 content={tweet.content}
                                 interaction={tweet.interaction}
-                                // quantityComments={tweet.interaction.comments}
-                                // quantityRetweets={tweet.interaction.retweets}
-                                // quantityLikes={tweet.interaction.likes}
+                                function={this.clickInteraction}
+                                index={index}
                             />
                         )
                     })
                 }
-                
             </div>
         );
     }
