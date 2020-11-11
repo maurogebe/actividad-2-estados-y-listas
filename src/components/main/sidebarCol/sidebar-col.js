@@ -18,36 +18,14 @@ class SidebarCol extends React.Component {
         super();
 
         this.state = {
-            trends: trend.sort(function(b, a) {
-                return a.numberTweets - b.numberTweets
-            }),
+            trends: trend,
             trendsLive: trendLive,
             counter: 0,
             boolean: true
         }
     }
 
-    // trendsPopular = () => {
-    //     // let cloneTrends = JSON.parse(JSON.stringify(this.state.trends))
-    //     // cloneTrends.sort(function(a,b) {
-    //     //     return a.numberTweets - b.numberTweets;
-    //     // });
-    //     this.setState({
-    //         trends: this.state.trends.sort(function(a,b) {
-    //             return a.numberTweets - b.numberTweets;
-    //         })
-    //     })
-    // }
-
     render() {
-
-        // if(this.state.boolean) {
-        //     this.trendsPopular()
-        //     this.setState({
-        //         boolean: false
-        //     })
-        //     console.log(this.state.trends)
-        // }
 
         const { name, live, title, img, category, categorySpecial, numberTweets } = {
             name: "" ,
@@ -75,7 +53,9 @@ class SidebarCol extends React.Component {
                         })
                     }
                     {
-                        this.state.trends.map( trend => {
+                        this.state.trends.sort(function(b, a) {
+                            return a.numberTweets - b.numberTweets
+                        }).map( trend => {
                             if(this.state.counter <= 4) {
                                 this.state.counter++
                                 return (
@@ -83,6 +63,7 @@ class SidebarCol extends React.Component {
                                 )
                             }
                         })
+                        
                     }
                 </div>
             </div>

@@ -13,7 +13,14 @@ class Feed extends React.Component {
 
     clickInteraction = (index, interaction) => {
         const cloneTweets = JSON.parse(JSON.stringify(this.state.tweets))
-        cloneTweets[index].interaction[interaction]++
+        
+        if(cloneTweets[index].selected[interaction]) {
+            cloneTweets[index].interaction[interaction]--
+            cloneTweets[index].selected[interaction] = false
+        } else {
+            cloneTweets[index].interaction[interaction]++
+            cloneTweets[index].selected[interaction] = true
+        }
         this.setState({
             tweets: cloneTweets
         })
@@ -27,6 +34,7 @@ class Feed extends React.Component {
                     this.state.tweets.map((tweet, index) => {
                         return (
                             <Tweet
+                                key={index}
                                 profile={tweet.profile}
                                 profileUrl={tweet.profileName}
                                 username={tweet.username}
@@ -34,6 +42,7 @@ class Feed extends React.Component {
                                 interaction={tweet.interaction}
                                 function={this.clickInteraction}
                                 index={index}
+                                selected={tweet.selected}
                             />
                         )
                     })

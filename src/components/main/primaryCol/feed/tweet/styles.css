@@ -84,3 +84,6 @@
     width: 100px;
     text-align: initial;
 }
+.selected > svg {
+    color: rgb(29, 161, 242);
+}

@@ -9,6 +9,9 @@ import {
     HeartOutline,
     RefreshOutline,
     AnnotationOutline,
+    HeartSolid,
+    RefreshSolid,
+    AnnotationSolid,
     BadgeCheckSolid
 } from "@graywolfai/react-heroicons";
 
@@ -17,10 +20,15 @@ class Tweet extends React.Component{
         super()
 
         this.state = {
-            icons: [
+            iconsOutline: [
                 <AnnotationOutline />,
                 <RefreshOutline />,
                 <HeartOutline />,
+            ],
+            iconsSolid: [
+                <AnnotationSolid />,
+                <RefreshSolid />,
+                <HeartSolid />
             ],
             iconBadge: <BadgeCheckSolid />,
         }
@@ -55,7 +63,7 @@ class Tweet extends React.Component{
                     <div className="row">
                         <div className="c2 c2--flex">
                             <h6>{this.props.profile}</h6>
-                            <Icon source={this.state.iconBadge} iconModifier={'c2__icon--badge'} />
+                            <Icon source={this.state.iconBadge} iconModifier={`c2__icon--badge`} />
                             <h6 className="c2__title c2__title--m-left c2__title--font-normal">@{this.props.username}</h6>
                         </div>
                         <div className="c3"></div>
@@ -67,12 +75,12 @@ class Tweet extends React.Component{
                     </div>
                     <div className='container-icons'>
                             {
-                                this.state.icons.map((icon, index) => {
+                                this.state.iconsOutline.map((icon, index) => {
                                     let nameInteraction = positionNameInteraction[index]
                                     return (
                                         <div>
                                             <div onClick={() => this.props.function(this.props.index, positionNameInteraction[index])}>
-                                                <Icon source={icon} />
+                                                <Icon source={this.props.selected[nameInteraction] ? this.state.iconsSolid[index] : icon} iconModifier={this.props.selected[nameInteraction] ? 'selected' : ''}/>
                                             </div>
                                             <span className="t-icon__quantity">{this.quantityMoreMil(this.props.interaction[nameInteraction])}</span>
                                         </div>

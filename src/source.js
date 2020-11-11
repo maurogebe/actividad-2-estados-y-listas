@@ -12,6 +12,11 @@ const feed = [
             retweets: 66,
             likes: 126
         },
+        selected: {
+            comments: true,
+            retweets: false,
+            likes: false
+        },
         verified: false,
         blocked: false
     },
@@ -25,6 +30,11 @@ const feed = [
             comments: 6700,
             retweets: 3700,
             likes: 84000
+        },
+        selected: {
+            comments: false,
+            retweets: false,
+            likes: false
         },
         verified: true,
         blocked: false
@@ -40,6 +50,11 @@ const feed = [
             retweets: 100,
             likes: 693
         },
+        selected: {
+            comments: false,
+            retweets: false,
+            likes: false
+        },
         verified: true,
         blocked: false
     },
@@ -52,6 +67,11 @@ const feed = [
             comments: 17600,
             retweets: 1300,
             likes: 78800
+        },
+        selected: {
+            comments: false,
+            retweets: false,
+            likes: false
         },
         verified: true,
         blocked: false
@@ -66,6 +86,11 @@ const feed = [
             comments: 1300,
             retweets: 2200,
             likes: 4200
+        },
+        selected: {
+            comments: false,
+            retweets: false,
+            likes: false
         },
         verified: true,
         blocked: false
@@ -82,6 +107,11 @@ const feed = [
             retweets: 34,
             likes: 524
         },
+        selected: {
+            comments: false,
+            retweets: false,
+            likes: false
+        },
         verified: true,
         blocked: false
     },
@@ -95,18 +125,10 @@ const feed = [
             retweets: 76,
             likes: 434
         },
-        verified: true,
-        blocked: false
-    },
-    {
-        profile: "Hipertextual",
-        profileName: "https://i.imgur.com/w8FdS5Pl.jpg",
-        username: "Hipertextual",
-        content: `Cinco recomendaciones, y una sorpresa, para ver en Netflix en noviembre`,
-        interaction: {
-            comments: 0,
-            retweets: 1,
-            likes: 4
+        selected: {
+            comments: false,
+            retweets: false,
+            likes: false
         },
         verified: true,
         blocked: false
@@ -120,6 +142,29 @@ const feed = [
             comments: 0,
             retweets: 1,
             likes: 4
+        },
+        selected: {
+            comments: false,
+            retweets: false,
+            likes: false
+        },
+        verified: true,
+        blocked: false
+    },
+    {
+        profile: "Hipertextual",
+        profileName: "https://i.imgur.com/w8FdS5Pl.jpg",
+        username: "Hipertextual",
+        content: `Cinco recomendaciones, y una sorpresa, para ver en Netflix en noviembre`,
+        interaction: {
+            comments: 0,
+            retweets: 1,
+            likes: 4
+        },
+        selected: {
+            comments: false,
+            retweets: false,
+            likes: false
         },
         verified: true,
         blocked: false
@@ -134,6 +179,11 @@ const feed = [
             retweets: 3700,
             likes: 14900
         },
+        selected: {
+            comments: false,
+            retweets: false,
+            likes: false
+        },
         verified: true,
         blocked: false
     },
@@ -146,6 +196,11 @@ const feed = [
             comments: 19,
             retweets: 54,
             likes: 818
+        },
+        selected: {
+            comments: false,
+            retweets: false,
+            likes: false
         },
         verified: true,
         blocked: false
@@ -163,6 +218,11 @@ const feed = [
             retweets: 30,
             likes: 723
         },
+        selected: {
+            comments: false,
+            retweets: false,
+            likes: false
+        },
         verified: true,
         blocked: true
     },
@@ -176,11 +236,40 @@ const feed = [
             retweets: 878,
             likes: 11300
         },
+        selected: {
+            comments: false,
+            retweets: false,
+            likes: false
+        },
         verified: true,
         blocked: true
     }
 ];
 
+const myProfile = {
+    profile: "Youtube",
+    profileName: "https://i.imgur.com/jCaFJzUl.jpg",
+    username: "Youtube",
+    verified: true,
+    blocked: true
+}
+
+const myTweet = {
+    content: ``,
+    interaction: {
+        comments: 0,
+        retweets: 0,
+        likes: 0
+    },
+    selected: {
+        comments: false,
+        retweets: false,
+        likes: false
+    },
+}
+
 export {
-    feed
+    feed,
+    myProfile,
+    myTweet
 }
