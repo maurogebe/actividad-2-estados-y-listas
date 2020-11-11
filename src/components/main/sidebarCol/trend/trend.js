@@ -21,6 +21,7 @@ class Trend extends React.Component {
     }
 
     quantityMoreMil = (property) => {
+        
         if(property > 1000) {
             const cloneProperty = (property / 1000) + ' mil'
             return cloneProperty
