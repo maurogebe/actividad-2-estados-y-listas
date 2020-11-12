@@ -246,30 +246,6 @@ const feed = [
     }
 ];
 
-const myProfile = {
-    profile: "Youtube",
-    profileName: "https://i.imgur.com/jCaFJzUl.jpg",
-    username: "Youtube",
-    verified: true,
-    blocked: true
-}
-
-const myTweet = {
-    content: ``,
-    interaction: {
-        comments: 0,
-        retweets: 0,
-        likes: 0
-    },
-    selected: {
-        comments: false,
-        retweets: false,
-        likes: false
-    },
-}
-
 export {
-    feed,
-    myProfile,
-    myTweet
+    feed
 }

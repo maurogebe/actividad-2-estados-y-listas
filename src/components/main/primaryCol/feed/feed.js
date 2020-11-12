@@ -1,13 +1,16 @@
 import React from "react";
 import Tweet from "./tweet/tweet";
 
+//Importando style
+import './styles.css'
+
 
 class Feed extends React.Component {
 
     render() {
 
         return (
-            <div>
+            <div className="container">
                 <Tweet
                     key={this.props.index}
                     profile={this.props.profile}

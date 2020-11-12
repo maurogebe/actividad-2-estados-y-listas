@@ -3,6 +3,7 @@ import './styles.css';
 
 // Importando componentes
 import Icon from '../../../../global/icon/icon'
+import OptionsTweet from './options-tweet/options-tweet'
 
 // Importando iconos
 import {
@@ -12,7 +13,9 @@ import {
     HeartSolid,
     RefreshSolid,
     AnnotationSolid,
-    BadgeCheckSolid
+    BadgeCheckSolid,
+    DotsHorizontalOutline,
+    TrashSolid,
 } from "@graywolfai/react-heroicons";
 
 class Tweet extends React.Component{
@@ -31,6 +34,9 @@ class Tweet extends React.Component{
                 <HeartSolid />
             ],
             iconBadge: <BadgeCheckSolid />,
+            iconDots: <DotsHorizontalOutline />,
+            iconTrash: <TrashSolid />,
+            options: false
         }
         
     }
@@ -41,6 +47,10 @@ class Tweet extends React.Component{
             return cloneProperty
         } else 
         return property
+    }
+
+    options() {
+        document.getElementById()
     }
 
 
@@ -55,7 +65,10 @@ class Tweet extends React.Component{
 
         return (
             <div className="tweet-container">
-                
+                <OptionsTweet 
+                    iconOptions={this.state.iconDots} 
+                    iconTrash={this.state.iconTrash}
+                />
                 <div className="c1 c1--m-right">
                     <img src={this.props.profileUrl} alt="profile" />
                 </div>
@@ -63,7 +76,7 @@ class Tweet extends React.Component{
                     <div className="row">
                         <div className="c2 c2--flex">
                             <h6>{this.props.profile}</h6>
-                            <Icon source={this.state.iconBadge} iconModifier={`c2__icon--badge`} />
+                            <Icon source={this.state.iconBadge} iconModifier={`t-icon c2__icon--badge`} />
                             <h6 className="c2__title c2__title--m-left c2__title--font-normal">@{this.props.username}</h6>
                         </div>
                         <div className="c3"></div>

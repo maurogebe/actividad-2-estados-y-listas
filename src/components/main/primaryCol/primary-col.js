@@ -43,7 +43,7 @@ class PrimaryCol extends React.Component {
             profile: "Mauricio Guerra",
             profileName: "https://i.imgur.com/YsfXKkN.jpg",
             username: "maurogebe",
-            content: value,
+            content: value.value,
             interaction: {
                 comments: 0,
                 retweets: 0,
@@ -63,6 +63,8 @@ class PrimaryCol extends React.Component {
         this.setState({
             tweets: cloneMyTweet
         })
+
+        value.value = ''
     }
 
     render() {

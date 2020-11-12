@@ -20,7 +20,10 @@ const Sidebar = (props) => {
                 {
                     props.iconList.map( icon => {
                         return (
-                            <Icon source={icon} />
+                            <Icon 
+                                source={icon} 
+                                iconModifier={'t-icon'} 
+                            />
                         )
                     })
                 }
