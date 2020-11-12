@@ -1,36 +1,9 @@
 import React from 'react';
 import './styles.css';
 
-// Importando componentes
-import Tweet from '../feed/tweet/tweet'
-
-// Importando base de datos
-import {myProfile, myTweet} from '../../../../source';
 
 
 class PostTweet extends React.Component {
-
-    constructor() {
-        super() 
-
-        this.state = {
-            myTweet: myTweet,
-            myProfile: myProfile,
-            value: ''
-        }
-    }
-
-    newTweet (event) {
-        event.preventDefault()
-        const valueTweet = document.getElementById('contentTweet')
-        const cloneMyTweet = JSON.parse(JSON.stringify(myTweet))
-        const content = cloneMyTweet.content
-        content.push(valueTweet.value)
-        // this.setState() {
-        //     myTweet:
-        // }
-        console.log(cloneMyTweet)
-    }
 
     render() {
 
@@ -40,7 +13,7 @@ class PostTweet extends React.Component {
                     <div className="t-profile-img">
                         <img src={this.props.profileUrl}  alt="profile" />
                     </div>
-                    <form onSubmit={this.newTweet}>
+                    <form onSubmit={(event) => this.props.functionSubmit(document.getElementById('contentTweet').value, event)}>
                         <input placeholder="¿Qué está pasando?" id="contentTweet" />
                         <div className="t-post-options">
                             <button>Twittear</button>
@@ -48,7 +21,6 @@ class PostTweet extends React.Component {
                     </form>
                     
                 </div>
-                {/* <Tweet /> */}
             </div>
         )        
     }
