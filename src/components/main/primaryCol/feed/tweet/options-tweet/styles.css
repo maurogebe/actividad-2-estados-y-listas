@@ -1,0 +1,30 @@
+.tweet-container .tweet-options {
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.tweet-options__options {
+    cursor: pointer;
+    margin: 0;
+    border: 1px solid;
+    background: white;
+    padding: 4px 15px 4px 4px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.tweet-options__option {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+}
+.tweet-options .tweet-options__option:hover {
+    color: rgb(29, 161, 242);
+}
+.tweet-options__options .tweet-options__icon--size-15 {
+    width: 15px;
+}
+.tweet-options__options--d-none {
+    display: none;
+}

@@ -69,15 +69,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: flex-start;
 }
-.container-icons > div {
-    /* height: 50px; */
-    width: 20px;
-    padding: 0.8em;
-    cursor: pointer;
-    transition: .2s all;
-    border-radius: 50%;
-    position: relative;
-}
 .t-icon__quantity {
     position: absolute;
     top: 11px;
@@ -87,5 +78,31 @@
 }
 .selected > svg {
     color: rgb(29, 161, 242);
+}
+.container-interaction {
+    position: relative;
+    width: 20px;
+    padding: 0.8em;
+    cursor: pointer;
+    transition: .2s all;
+    border-radius: 50%;
+}
+.tweet-container .tweet-container__icon {
+    width: 20px;
+}
+.tweet-container .tweet-container__icon:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+.tweet-container .tweet-container__icon:hover > svg {
+    color: rgb(29, 161, 242);
+}
+.position-absolute {
+    position: absolute;
+    right: 0;
+    top: 8px;
+}
+.tweet-container .width-auto {
+    width: auto;
 }
 

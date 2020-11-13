@@ -21,6 +21,10 @@ class Feed extends React.Component {
                     function={this.props.function}
                     index={this.props.index}
                     selected={this.props.selected}
+                    deleteTweet={this.props.deleteTweet}
+                    showContext={this.props.showContext}
+                    contextOptions={this.props.contextOptions}
+                    editTweet={this.props.editTweet}
                 />
             </div>
         );

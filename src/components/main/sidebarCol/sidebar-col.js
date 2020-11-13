@@ -10,6 +10,12 @@ import TrendLive from './trend/trend-live'
 
 // Importando base de datos
 import { trend, trendLive } from '../../../source-trends'
+// import { feed } from '../../../source'
+
+// Importando iconos
+import {
+    BadgeCheckSolid,
+} from "@graywolfai/react-heroicons";
 
 
 class SidebarCol extends React.Component {
@@ -20,14 +26,16 @@ class SidebarCol extends React.Component {
         this.state = {
             trends: trend,
             trendsLive: trendLive,
+            // tweetProfile: feed,
             counter: 0,
-            boolean: true
+            boolean: true,
+            iconBadge: <BadgeCheckSolid />
         }
     }
 
     render() {
 
-        const { name, live, title, img, category, categorySpecial, numberTweets } = {
+        const { name, live, title, img, category, categorySpecial, numberTweets, profile, profileName, username } = {
             name: "" ,
             live: "" ,
             title: "" ,
@@ -35,11 +43,16 @@ class SidebarCol extends React.Component {
             category: "" ,
             categorySpecial: "" ,
             numberTweets: "",
+            profile: "",
+            profileName: "",
+            username: "",
         };
 
         return (
             <div className="container-sidebar-col">
-                <Search />
+                <Search 
+                    // tweetProfile={this.state.tweetProfile}
+                />
                 <div className="container-trend">
                     <h3 className="container-trend__title">Que esta pasando</h3>
                     {

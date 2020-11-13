@@ -26,3 +26,20 @@
     background: #0d54742b;
     border: none;
 }
+.container-search-user {
+    width: 116%;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 90vh;
+}
+.container-search-user::-webkit-scrollbar {
+    width: 0.5rem;
+}
+.container-search-user::-webkit-scrollbar-track {
+    background: white;
+}
+.container-search-user::-webkit-scrollbar-thumb {
+    background: rgb(29, 161, 242);
+    border-radius: 5px;
+}

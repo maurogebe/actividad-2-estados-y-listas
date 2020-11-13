@@ -16,6 +16,7 @@ import {
     BadgeCheckSolid,
     DotsHorizontalOutline,
     TrashSolid,
+    PencilSolid,
 } from "@graywolfai/react-heroicons";
 
 class Tweet extends React.Component{
@@ -36,6 +37,7 @@ class Tweet extends React.Component{
             iconBadge: <BadgeCheckSolid />,
             iconDots: <DotsHorizontalOutline />,
             iconTrash: <TrashSolid />,
+            iconPencil: <PencilSolid />,
             options: false
         }
         
@@ -65,10 +67,16 @@ class Tweet extends React.Component{
 
         return (
             <div className="tweet-container">
-                <OptionsTweet 
-                    iconOptions={this.state.iconDots} 
-                    iconTrash={this.state.iconTrash}
-                />
+                <div className="position-absolute width-auto" onClick={() => this.props.showContext(this.props.index)}>
+                    <Icon 
+                        source={this.state.iconDots} 
+                        iconModifier={`tweet-container__icon`} 
+                    />
+                </div>
+                
+                {
+                    this.props.contextOptions ? <OptionsTweet iconTrash={this.state.iconTrash} iconPencil={this.state.iconPencil} deleteTweet={this.props.deleteTweet} editTweet={this.props.editTweet} index={this.props.index}/> : null
+                }
                 <div className="c1 c1--m-right">
                     <img src={this.props.profileUrl} alt="profile" />
                 </div>
@@ -91,12 +99,14 @@ class Tweet extends React.Component{
                                 this.state.iconsOutline.map((icon, index) => {
                                     let nameInteraction = positionNameInteraction[index]
                                     return (
-                                        <div>
-                                            <div onClick={() => this.props.function(this.props.index, positionNameInteraction[index])}>
-                                                <Icon source={this.props.selected[nameInteraction] ? this.state.iconsSolid[index] : icon} iconModifier={this.props.selected[nameInteraction] ? 'selected' : ''}/>
+                                        <>
+                                            <div className="container-interaction">
+                                                <div onClick={() => this.props.function(this.props.index, positionNameInteraction[index])}>
+                                                    <Icon source={this.props.selected[nameInteraction] ? this.state.iconsSolid[index] : icon} iconModifier={this.props.selected[nameInteraction] ? 'selected' : ''}/>
+                                                </div>
+                                                <span className="t-icon__quantity">{this.quantityMoreMil(this.props.interaction[nameInteraction])}</span>
                                             </div>
-                                            <span className="t-icon__quantity">{this.quantityMoreMil(this.props.interaction[nameInteraction])}</span>
-                                        </div>
+                                        </>
                                     )
                                 })
                             }
@@ -108,7 +118,3 @@ class Tweet extends React.Component{
 }
 
 export default Tweet;
-
-// https://hipertextual.com/files/2012/06/twitter-bird-white-on-blue.jpg
-//@TwitterSafety
-//Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut risus et enim sodales congue sed ac ante. Maecenas tincidunt tortor vel lorem semper vestibulum. Phasellus placerat arcu ac dui ultricies, sed tempor dolor rhoncus. Cras id leo sem.

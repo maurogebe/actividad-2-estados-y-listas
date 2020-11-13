@@ -13,10 +13,11 @@ const feed = [
             likes: 126
         },
         selected: {
-            comments: true,
+            comments: false,
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: false,
         blocked: false
     },
@@ -36,6 +37,7 @@ const feed = [
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: true,
         blocked: false
     },
@@ -55,6 +57,7 @@ const feed = [
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: true,
         blocked: false
     },
@@ -73,6 +76,7 @@ const feed = [
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: true,
         blocked: false
     },
@@ -92,6 +96,7 @@ const feed = [
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: true,
         blocked: false
     },
@@ -112,6 +117,7 @@ const feed = [
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: true,
         blocked: false
     },
@@ -130,6 +136,7 @@ const feed = [
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: true,
         blocked: false
     },
@@ -148,6 +155,7 @@ const feed = [
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: true,
         blocked: false
     },
@@ -166,6 +174,7 @@ const feed = [
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: true,
         blocked: false
     },{
@@ -184,6 +193,7 @@ const feed = [
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: true,
         blocked: false
     },
@@ -202,6 +212,7 @@ const feed = [
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: true,
         blocked: false
     },
@@ -223,6 +234,7 @@ const feed = [
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: true,
         blocked: true
     },
@@ -241,6 +253,7 @@ const feed = [
             retweets: false,
             likes: false
         },
+        contextOptions: false,
         verified: true,
         blocked: true
     }

@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+.container--hover:hover {
+    background-color: #1da1f2;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.container--bg-azul-cielo {
+    z-index: 1;
+    background-color: white;
+}
+.container--p-relative {
+    position: relative;
+}
+.container__img-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.container__profile {
+    margin-left: 0.5rem;
+}
+.container__icon--badge {
+    width: 20px;
+    padding-top: 7px;
+    cursor: pointer;
+    transition: .2s all;
+    border-radius: 50%;
+}
+.container__icon--badge > svg {
+    color: rgb(29, 161, 242);
+}
+.container__icon--badge:hover {
+    background-color: transparent;
+    cursor: default;
+}
+.container__icon--badge:hover > svg {
+    color: rgb(29, 161, 242);
+}
+.container__username {
+
+}
+.container__username--font-normal {
+    font-weight: normal;
+}

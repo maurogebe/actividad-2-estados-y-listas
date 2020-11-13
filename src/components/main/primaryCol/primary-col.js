@@ -67,6 +67,28 @@ class PrimaryCol extends React.Component {
         value.value = ''
     }
 
+    showContextOptions = (index) => {
+        const cloneArray = JSON.parse(JSON.stringify(this.state.tweets))
+        cloneArray[index].contextOptions = !cloneArray[index].contextOptions
+        this.setState({
+            tweets: cloneArray
+        })
+        console.log(cloneArray[index].contextOptions, index)
+    }
+
+    removeTweet = (index) => {
+        const cloneArray = JSON.parse(JSON.stringify(this.state.tweets))
+        cloneArray.splice(index, 1)
+        this.setState({
+            tweets: cloneArray
+        })
+    }
+
+    editTweet = (index) => {
+        const cloneArray = JSON.parse(JSON.stringify(this.state.tweets))
+        // cloneArray[index].
+    }
+
     render() {
 
         return (
@@ -75,7 +97,6 @@ class PrimaryCol extends React.Component {
                 <PostTweet 
                     profileUrl={this.props.profileUrl}
                     functionSubmit={this.newTweets}
-                    // functionEvent={this.eventPrevent}
                 />
                 {
                     this.state.tweets.map((tweet, index) => {
@@ -90,6 +111,10 @@ class PrimaryCol extends React.Component {
                                 function={this.clickInteraction}
                                 index={index}
                                 selected={tweet.selected}
+                                deleteTweet={this.removeTweet}
+                                showContext={this.showContextOptions}
+                                contextOptions={tweet.contextOptions}
+                                editTweet={this.editTweet}
                             />
                         )
                     })

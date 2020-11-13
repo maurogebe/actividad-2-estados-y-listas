@@ -9,7 +9,7 @@ class PostTweet extends React.Component {
 
         return(
             <div className="container">
-                <div className="t-row t-post-tweet">
+                <div className="t-row t-post-tweet t-width">
                     <div className="t-profile-img">
                         <img src={this.props.profileUrl}  alt="profile" />
                     </div>
