@@ -25,15 +25,12 @@ class Search extends React.Component {
             user: feed,
             icon: <SearchOutline />,
             iconBadge: <BadgeCheckSolid />,
-            searchUser: ''
         }
+        this.catchValue = this.catchValue.bind(this)
     }
 
-    searchUser = (event) => {
-        const user = event.target.value
-        this.setState({
-            searchUser: user
-        })
+    catchValue(event) {
+        this.props.catchValueSearchUser(event.target.value)
     }
     
     render() {
@@ -44,21 +41,23 @@ class Search extends React.Component {
             username: "",
         };
 
+        const value = this.props.valueSearchUser
+
         return (
             <div className="container-search">
                 <Icon source={this.state.icon} iconModifier={'container-search__icon'} />
-                <input className="container-search__input" onChange={this.searchUser} type="text" id="search" placeholder="Buscar en Twitter" value={this.state.searchUser} />
+                <input className="container-search__input" onChange={this.catchValue} type="text" id="search" placeholder="Buscar en Twitter" value={value} />
                 <div className="container-search-user">
                     {
-                        this.state.user
+                        this.props.sourceUser
                         .filter( user => {
-                            if(this.state.searchUser === '') {
+                            if(value === '') {
                                 return null
                             } else {
                                 return (
                                     user.profile
                                     .toLocaleLowerCase()
-                                    .includes(this.state.searchUser.toLocaleLowerCase())
+                                    .includes(value)
                                 )
                             }
                         })

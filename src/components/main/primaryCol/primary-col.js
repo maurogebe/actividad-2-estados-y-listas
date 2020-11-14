@@ -3,91 +3,91 @@ import PostTweet from './postTweet/post-tweet';
 import Feed from './feed/feed';
 
 // Importando base de datos
-import {feed} from '../../../source';
+// import {feed} from '../../../source';
 
 // Importando estilos
 import './styles.css'
 
 class PrimaryCol extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            tweets: feed,
-        }
-        this.newTweets = this.newTweets.bind(this)
-    }
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         tweets: feed,
+    //     }
+    //     this.newTweets = this.newTweets.bind(this)
+    // }
 
-    clickInteraction = (index, interaction) => {
-        const cloneTweets = JSON.parse(JSON.stringify(this.state.tweets))
+    // clickInteraction = (index, interaction) => {
+    //     const cloneTweets = JSON.parse(JSON.stringify(this.state.tweets))
         
-        if(cloneTweets[index].selected[interaction]) {
-            cloneTweets[index].interaction[interaction]--
-            cloneTweets[index].selected[interaction] = false
-        } else {
-            cloneTweets[index].interaction[interaction]++
-            cloneTweets[index].selected[interaction] = true
-        }
-        this.setState({
-            tweets: cloneTweets,
-        })
-    }
+    //     if(cloneTweets[index].selected[interaction]) {
+    //         cloneTweets[index].interaction[interaction]--
+    //         cloneTweets[index].selected[interaction] = false
+    //     } else {
+    //         cloneTweets[index].interaction[interaction]++
+    //         cloneTweets[index].selected[interaction] = true
+    //     }
+    //     this.setState({
+    //         tweets: cloneTweets,
+    //     })
+    // }
 
 
-    newTweets (value, event) {
-        event.preventDefault()
+    // newTweets (value, event) {
+    //     event.preventDefault()
 
-        const cloneMyTweet = JSON.parse(JSON.stringify(this.state.tweets))
+    //     const cloneMyTweet = JSON.parse(JSON.stringify(this.state.tweets))
 
-        let newTweet = {
-            profile: "Mauricio Guerra",
-            profileName: "https://i.imgur.com/YsfXKkN.jpg",
-            username: "maurogebe",
-            content: value.value,
-            interaction: {
-                comments: 0,
-                retweets: 0,
-                likes: 0
-            },
-            selected: {
-                comments: false,
-                retweets: false,
-                likes: false
-            },
-            verified: false,
-            blocked: false
-        }
+    //     let newTweet = {
+    //         profile: "Mauricio Guerra",
+    //         profileName: "https://i.imgur.com/YsfXKkN.jpg",
+    //         username: "maurogebe",
+    //         content: value.value,
+    //         interaction: {
+    //             comments: 0,
+    //             retweets: 0,
+    //             likes: 0
+    //         },
+    //         selected: {
+    //             comments: false,
+    //             retweets: false,
+    //             likes: false
+    //         },
+    //         verified: false,
+    //         blocked: false
+    //     }
 
-        cloneMyTweet.unshift(newTweet)
+    //     cloneMyTweet.unshift(newTweet)
 
-        this.setState({
-            tweets: cloneMyTweet
-        })
+    //     this.setState({
+    //         tweets: cloneMyTweet
+    //     })
 
-        value.value = ''
-    }
+    //     value.value = ''
+    // }
 
-    showContextOptions = (index) => {
-        const cloneArray = JSON.parse(JSON.stringify(this.state.tweets))
-        cloneArray[index].contextOptions = !cloneArray[index].contextOptions
-        this.setState({
-            tweets: cloneArray
-        })
-        console.log(cloneArray[index].contextOptions, index)
-    }
+    // showContextOptions = (index) => {
+    //     const cloneArray = JSON.parse(JSON.stringify(this.state.tweets))
+    //     cloneArray[index].contextOptions = !cloneArray[index].contextOptions
+    //     this.setState({
+    //         tweets: cloneArray
+    //     })
+    //     console.log(cloneArray[index].contextOptions, index)
+    // }
 
-    removeTweet = (index) => {
-        const cloneArray = JSON.parse(JSON.stringify(this.state.tweets))
-        cloneArray.splice(index, 1)
-        this.setState({
-            tweets: cloneArray
-        })
-    }
+    // removeTweet = (index) => {
+    //     const cloneArray = JSON.parse(JSON.stringify(this.state.tweets))
+    //     cloneArray.splice(index, 1)
+    //     this.setState({
+    //         tweets: cloneArray
+    //     })
+    // }
 
-    editTweet = (index) => {
-        const cloneArray = JSON.parse(JSON.stringify(this.state.tweets))
-        // cloneArray[index].
-    }
+    // editTweet = (index) => {
+    //     const cloneArray = JSON.parse(JSON.stringify(this.state.tweets))
+    //     // cloneArray[index].
+    // }
 
     render() {
 
@@ -99,7 +99,7 @@ class PrimaryCol extends React.Component {
                     functionSubmit={this.newTweets}
                 />
                 {
-                    this.state.tweets.map((tweet, index) => {
+                    this.props.sourceTweets.map((tweet, index) => {
                         return (
                             <Feed 
                                 key={index}
@@ -108,13 +108,13 @@ class PrimaryCol extends React.Component {
                                 username={tweet.username}
                                 content={tweet.content}
                                 interaction={tweet.interaction}
-                                function={this.clickInteraction}
+                                function={this.props.function}
                                 index={index}
                                 selected={tweet.selected}
-                                deleteTweet={this.removeTweet}
-                                showContext={this.showContextOptions}
+                                deleteTweet={this.props.deleteTweet}
+                                showContext={this.props.showContext}
                                 contextOptions={tweet.contextOptions}
-                                editTweet={this.editTweet}
+                                editTweet={this.props.editTweet}
                             />
                         )
                     })
