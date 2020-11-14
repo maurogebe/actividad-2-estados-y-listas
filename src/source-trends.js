@@ -13,13 +13,13 @@ const trend = [
         verified: false,
         blocked: false
     },
-    {
-        category: "Tendencia en Mexico",
-        title: "Eren",
-        numberTweets: 354,
-        verified: false,
-        blocked: false
-    },
+    // {
+    //     category: "Tendencia en Mexico",
+    //     title: "Eren",
+    //     numberTweets: 354,
+    //     verified: false,
+    //     blocked: false
+    // },
     {
         category: "Futbol - Tendencia",
         title: "Real Madrid",

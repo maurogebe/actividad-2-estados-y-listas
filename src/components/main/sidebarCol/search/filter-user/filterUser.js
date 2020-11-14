@@ -24,7 +24,7 @@ class FilterUser extends React.Component {
     render() {
 
         return (
-            <a className="container container--hover container--bg-azul-cielo container--p-relative">
+            <a onClick={() => this.props.filteredSearchValue(this.props.profile)} className="container container--hover container--bg-azul-cielo container--p-relative" value={this.props.profile}>
                 <img className="container__img-profile" src={this.props.profileUrl} alt="profile" />
                 <h4 className="container__profile">{this.props.profile}</h4>
                 <Icon source={this.props.iconBadge} iconModifier={`t-icon container__icon--badge`} />

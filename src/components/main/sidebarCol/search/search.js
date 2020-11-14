@@ -68,6 +68,7 @@ class Search extends React.Component {
                                 profile={user.profile}
                                 username={user.username}
                                 iconBadge={this.state.iconBadge}
+                                filteredSearchValue={this.props.filteredSearchValue}
                             />
                             )
                         })

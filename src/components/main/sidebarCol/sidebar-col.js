@@ -21,6 +21,11 @@ class SidebarCol extends React.Component {
 
     render() {
 
+        let counter = this.state.counter
+        let fun = () => this.setState({
+            counter: counter
+        })
+
         const { name, live, title, img, category, categorySpecial, numberTweets, profile, profileName, username } = {
             name: "" ,
             live: "" ,
@@ -40,13 +45,13 @@ class SidebarCol extends React.Component {
                     sourceUser={this.props.sourceUser}
                     catchValueSearchUser={this.props.catchValueSearchUser}
                     valueSearchUser={this.props.valueSearchUser}
+                    filteredSearchValue={this.props.filteredSearchValue}
                 />
                 <div className="container-trend">
                     <h3 className="container-trend__title">Que esta pasando</h3>
                     {
                         this.props.sourceTrendsLive.map( trend => {
                             if(trend) {
-                                this.state.counter++
                                 return (
                                     <TrendLive name={trend.name} live={trend.live} title={trend.title} img={trend.img} category={trend.category} categorySpecial={trend.categorySpecial} />
                                 )
@@ -57,8 +62,8 @@ class SidebarCol extends React.Component {
                         this.props.sourceTrends.sort(function(b, a) {
                             return a.numberTweets - b.numberTweets
                         }).map( trend => {
-                            if(this.state.counter <= 4) {
-                                this.state.counter++
+                            if(this.state.counter <= 3) {
+                                // this.state.counter++
                                 return (
                                     <Trend category={trend.category} title={trend.title} numberTweets={trend.numberTweets} />
                                 )

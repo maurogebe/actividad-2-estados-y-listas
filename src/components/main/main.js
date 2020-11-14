@@ -16,6 +16,7 @@ class Main extends React.Component {
     constructor() {
         super();
         this.state = {
+            tweetsNotMutable: feed,
             tweets: feed,
             trends: trend,
             trendsLive: trendLive,
@@ -26,6 +27,8 @@ class Main extends React.Component {
         }
         this.newTweets = this.newTweets.bind(this)
         this.searchUser = this.searchUser.bind(this)
+        this.filterTweetUser = this.filterTweetUser.bind(this)
+        this.clearSearch = this.clearSearch.bind(this)
     }
 
     clickInteraction = (index, interaction) => {
@@ -102,7 +105,25 @@ class Main extends React.Component {
         this.setState({
             valueSearchUser: value
         })
-        console.log(this.state.valueSearchUser)
+    }
+
+    filterTweetUser(value) {
+        const newTweets = JSON.parse(JSON.stringify(this.state.tweetsNotMutable))
+        const tweetUser = newTweets.filter( tweet => {
+            if(tweet.profile === value) {
+                return tweet
+            }
+        })
+        this.setState({
+            tweets: tweetUser
+        })
+    }
+
+    clearSearch = () => {
+        // const newTweets = JSON.parse(JSON.stringify(this.state.tweetsNotMutable))
+        this.setState({
+            tweets: this.state.tweetsNotMutable
+        })
     }
 
     
@@ -131,14 +152,17 @@ class Main extends React.Component {
                     deleteTweet={this.removeTweet}
                     showContext={this.showContextOptions}
                     editTweet={this.editTweet}
+                    clearSearch={this.clearSearch}
+                    functionSubmit={this.newTweets}
                 />
                 <SidebarCol 
                     cambiarImagen={this.props.cambiarImagen} 
                     sourceTrendsLive={this.state.trendsLive}
                     sourceTrends={this.state.trends}
-                    sourceUser={this.state.tweets}
+                    sourceUser={this.state.tweetsNotMutable}
                     catchValueSearchUser={this.searchUser}
                     valueSearchUser={this.state.valueSearchUser.toLocaleLowerCase()}
+                    filteredSearchValue={this.filterTweetUser}
                 />
             </div>
         )
