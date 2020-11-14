@@ -90,8 +90,8 @@ class Tweet extends React.Component{
                         <div className="c3"></div>
                     </div>
                     <div className="row">
-                        <p className="content">                
-                            {this.props.content}
+                        <p className="content">
+                        {this.props.content}
                         </p>
                     </div>
                     <div className='container-icons'>

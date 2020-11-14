@@ -14,3 +14,7 @@
     background: rgb(29, 161, 242);
     border-radius: 5px;
 }
+.title:hover {
+    color:  rgb(29, 161, 242);
+    cursor: pointer;
+}

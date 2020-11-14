@@ -7,6 +7,9 @@
     border-radius: 20px;
     cursor: pointer;
 }
+.container--hover:hover > .container__icon--badge > svg {
+    color: white;
+}
 .container--bg-azul-cielo {
     z-index: 1;
     background-color: white;
@@ -38,9 +41,6 @@
 }
 .container__icon--badge:hover > svg {
     color: rgb(29, 161, 242);
-}
-.container__username {
-
 }
 .container__username--font-normal {
     font-weight: normal;
