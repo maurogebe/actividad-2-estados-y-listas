@@ -259,6 +259,94 @@ const feed = [
     }
 ];
 
+const user = [
+    {
+        profile: "AJ + Español",
+        profileName: "https://i.imgur.com/QJruc0xm.png",
+        username: "ajplusespanol",
+        verified: false,
+        blocked: false
+    },
+    {
+        profile: "Elon Musk",
+        profileName: "https://i.imgur.com/rNMKJSQl.jpg",
+        username: "elonmusk",
+        verified: true,
+        blocked: false
+    },
+    {
+        profile: "Google",
+        profileName: "https://i.imgur.com/xosRXkNl.jpg",
+        username: "google",
+        verified: true,
+        blocked: false
+    },
+    {
+        profile: "LeBron James",
+        profileName: "https://i.imgur.com/d7KVNXwl.jpg",
+        username: "KingJames",
+        verified: true,
+        blocked: false
+    },
+    {
+        profile: "BBC Breaking News",
+        profileName: "https://i.imgur.com/YbqahGPl.jpg",
+        username: "BBCBreaking",
+        verified: true,
+        blocked: false
+    },
+    {
+        profile: "NVIDIA GeForce",
+        profileName: "https://i.imgur.com/Agv0nC3l.jpg",
+        username: "NVIDIAGeForce",
+        verified: true,
+        blocked: false
+    },
+    {
+        profile: "National Geographic",
+        profileName: "https://i.imgur.com/3nwHKzRl.jpg",
+        username: "NatGeo",
+        verified: true,
+        blocked: false
+    },
+    {
+        profile: "Hipertextual",
+        profileName: "https://i.imgur.com/w8FdS5Pl.jpg",
+        username: "Hipertextual",
+        verified: true,
+        blocked: false
+    },
+    {
+        profile: "Real Madrid C.F.",
+        profileName: "https://i.imgur.com/6kZ2yA5l.jpg",
+        username: "realmadrid",
+        verified: true,
+        blocked: false
+    },
+    {
+        profile: "UEFA Champions League",
+        profileName: "https://i.imgur.com/rs0iJu3l.jpg",
+        username: "ChampionsLeague",
+        verified: true,
+        blocked: false
+    },
+    {
+        profile: "FC Barcelona",
+        profileName: "https://i.imgur.com/9IlaO4rl.jpg",
+        username: "FCBarcelona_es",
+        verified: true,
+        blocked: true
+    },
+    {
+        profile: "Youtube",
+        profileName: "https://i.imgur.com/jCaFJzUl.jpg",
+        username: "Youtube",
+        verified: true,
+        blocked: true
+    }
+];
+
 export {
-    feed
+    feed,
+    user
 }

@@ -5,7 +5,7 @@ import './styles.css'
 
 // Importando componentes
 import Icon from '../../../global/icon/icon'
-import FilterUser from './filter-user/filterUser'
+import SearchDropdown from './filter-user/searchDropdown'
 
 // Importando base de datos
 import { feed } from '../../../../source'
@@ -62,14 +62,15 @@ class Search extends React.Component {
                             }
                         })
                         .map( user => {
+
                             return (
-                                <FilterUser 
-                                profileUrl={user.profileName}
-                                profile={user.profile}
-                                username={user.username}
-                                iconBadge={this.state.iconBadge}
-                                filteredSearchValue={this.props.filteredSearchValue}
-                            />
+                                <SearchDropdown 
+                                    profileUrl={user.profileName}
+                                    profile={user.profile}
+                                    username={user.username}
+                                    iconBadge={this.state.iconBadge}
+                                    filteredSearchValue={this.props.filteredSearchValue}
+                                />
                             )
                         })
                     }

@@ -11,7 +11,7 @@ import {
     SearchOutline
 } from "@graywolfai/react-heroicons";
 
-class FilterUser extends React.Component {
+class SearchDropdown extends React.Component {
 
     constructor() {
         super()
@@ -34,4 +34,4 @@ class FilterUser extends React.Component {
     }
 }
 
-export default FilterUser
+export default SearchDropdown

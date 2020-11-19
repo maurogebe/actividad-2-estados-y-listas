@@ -3,7 +3,7 @@ import PrimaryCol from './primaryCol/primary-col';
 import SidebarCol from './sidebarCol/sidebar-col';
 
 // Importando base de datos
-import { feed } from '../../source'
+import { feed, user } from '../../source'
 import { trend, trendLive } from '../../source-trends'
 
 // Importando iconos
@@ -16,6 +16,7 @@ class Main extends React.Component {
     constructor() {
         super();
         this.state = {
+            users: user,
             tweetsNotMutable: feed,
             tweets: feed,
             trends: trend,
@@ -159,7 +160,7 @@ class Main extends React.Component {
                     cambiarImagen={this.props.cambiarImagen} 
                     sourceTrendsLive={this.state.trendsLive}
                     sourceTrends={this.state.trends}
-                    sourceUser={this.state.tweetsNotMutable}
+                    sourceUser={this.state.users}
                     catchValueSearchUser={this.searchUser}
                     valueSearchUser={this.state.valueSearchUser.toLocaleLowerCase()}
                     filteredSearchValue={this.filterTweetUser}
