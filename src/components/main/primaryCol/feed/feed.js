@@ -24,7 +24,6 @@ class Feed extends React.Component {
                     deleteTweet={this.props.deleteTweet}
                     showContext={this.props.showContext}
                     contextOptions={this.props.contextOptions}
-                    editTweet={this.props.editTweet}
                     iconsOutline={this.props.iconsOutline}
                     iconsSolid={this.props.iconsSolid}
                     iconDots={this.props.iconDots}

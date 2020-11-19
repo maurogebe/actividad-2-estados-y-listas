@@ -34,7 +34,7 @@ class Tweet extends React.Component{
                 </div>
                 
                 {
-                    this.props.contextOptions ? <OptionsTweet iconTrash={this.props.iconTrash} iconPencil={this.props.iconPencil} deleteTweet={this.props.deleteTweet} editTweet={this.props.editTweet} index={this.props.index}/> : null
+                    this.props.contextOptions ? <OptionsTweet iconTrash={this.props.iconTrash} iconPencil={this.props.iconPencil} deleteTweet={this.props.deleteTweet} index={this.props.index}/> : null
                 }
                 <div className="c1 c1--m-right">
                     <img src={this.props.profileUrl} alt="profile" />

@@ -115,7 +115,13 @@ class Main extends React.Component {
 
     showContextOptions = (index) => {
         const cloneArray = JSON.parse(JSON.stringify(this.state.tweets))
-        cloneArray.forEach( ar => ar.contextOptions = false)
+        cloneArray.forEach( ar => {
+            if(ar === cloneArray[index]) {
+                
+            } else {
+                ar.contextOptions = false
+            }
+        })
         cloneArray[index].contextOptions = !cloneArray[index].contextOptions
         this.setState({
             tweets: cloneArray
@@ -181,7 +187,6 @@ class Main extends React.Component {
                     function={this.clickInteraction}
                     deleteTweet={this.removeTweet}
                     showContext={this.showContextOptions}
-                    editTweet={this.editTweet}
                     clearSearch={this.clearSearch}
                     functionSubmit={this.newTweets}
                     iconsOutline={this.state.iconsOutline}
