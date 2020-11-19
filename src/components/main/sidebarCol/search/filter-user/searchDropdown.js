@@ -6,20 +6,8 @@ import './styles.css'
 // Importando componentes
 import Icon from '../../../../global/icon/icon'
 
-// Importando Iconos
-import {
-    SearchOutline
-} from "@graywolfai/react-heroicons";
 
 class SearchDropdown extends React.Component {
-
-    constructor() {
-        super()
-
-        this.state = {
-            icon: <SearchOutline />
-        }
-    }
     
     render() {
 

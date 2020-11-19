@@ -8,7 +8,17 @@ import { trend, trendLive } from '../../source-trends'
 
 // Importando iconos
 import {
+    HeartOutline,
+    RefreshOutline,
+    AnnotationOutline,
+    HeartSolid,
+    RefreshSolid,
+    AnnotationSolid,
+    DotsHorizontalOutline,
+    TrashSolid,
+    PencilSolid,
     BadgeCheckSolid,
+    SearchOutline,
 } from "@graywolfai/react-heroicons";
 
 class Main extends React.Component {
@@ -24,12 +34,27 @@ class Main extends React.Component {
             valueSearchUser: '',
             counter: 0,
             boolean: true,
-            iconBadge: <BadgeCheckSolid />
+            iconsOutline: [
+                <AnnotationOutline />,
+                <RefreshOutline />,
+                <HeartOutline />,
+            ],
+            iconsSolid: [
+                <AnnotationSolid />,
+                <RefreshSolid />,
+                <HeartSolid />
+            ],
+            iconBadge: <BadgeCheckSolid />,
+            iconDots: <DotsHorizontalOutline />,
+            iconTrash: <TrashSolid />,
+            iconPencil: <PencilSolid />,
+            iconSearch: <SearchOutline />,
         }
         this.newTweets = this.newTweets.bind(this)
         this.searchUser = this.searchUser.bind(this)
         this.filterTweetUser = this.filterTweetUser.bind(this)
         this.clearSearch = this.clearSearch.bind(this)
+        this.quantityMoreMil = this.quantityMoreMil.bind(this)
     }
 
     clickInteraction = (index, interaction) => {
@@ -80,6 +105,14 @@ class Main extends React.Component {
         value.value = ''
     }
 
+    quantityMoreMil = (property) => {
+        if(property > 1000) {
+            const cloneProperty = (property / 1000) + ' mil'
+            return cloneProperty
+        } else 
+        return property
+    }
+
     showContextOptions = (index) => {
         const cloneArray = JSON.parse(JSON.stringify(this.state.tweets))
         cloneArray.forEach( ar => ar.contextOptions = false)
@@ -96,10 +129,6 @@ class Main extends React.Component {
         this.setState({
             tweets: cloneArray
         })
-    }
-
-    editTweet = (index) => {
-        const cloneArray = JSON.parse(JSON.stringify(this.state.tweets))
     }
 
     searchUser(value) {
@@ -155,6 +184,13 @@ class Main extends React.Component {
                     editTweet={this.editTweet}
                     clearSearch={this.clearSearch}
                     functionSubmit={this.newTweets}
+                    iconsOutline={this.state.iconsOutline}
+                    iconsSolid={this.state.iconsSolid}
+                    iconDots={this.state.iconDots}
+                    iconTrash={this.state.iconTrash}
+                    iconPencil={this.state.iconPencil}
+                    iconBadge={this.state.iconBadge}
+                    quantityMoreMilFn={this.quantityMoreMil}
                 />
                 <SidebarCol 
                     cambiarImagen={this.props.cambiarImagen} 
@@ -164,6 +200,10 @@ class Main extends React.Component {
                     catchValueSearchUser={this.searchUser}
                     valueSearchUser={this.state.valueSearchUser.toLocaleLowerCase()}
                     filteredSearchValue={this.filterTweetUser}
+                    iconSearch={this.state.iconSearch}
+                    iconBadge={this.state.iconBadge}
+                    quantityMoreMilFn={this.quantityMoreMil}
+                    iconDots={this.state.iconDots}
                 />
             </div>
         )

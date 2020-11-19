@@ -25,6 +25,13 @@ class Feed extends React.Component {
                     showContext={this.props.showContext}
                     contextOptions={this.props.contextOptions}
                     editTweet={this.props.editTweet}
+                    iconsOutline={this.props.iconsOutline}
+                    iconsSolid={this.props.iconsSolid}
+                    iconDots={this.props.iconDots}
+                    iconTrash={this.props.iconTrash}
+                    iconPencil={this.props.iconPencil}
+                    iconBadge={this.props.iconBadge}
+                    quantityMoreMilFn={this.props.quantityMoreMilFn}
                 />
             </div>
         );

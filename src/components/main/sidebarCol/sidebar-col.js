@@ -11,20 +11,7 @@ import TrendLive from './trend/trend-live'
 
 class SidebarCol extends React.Component {
 
-    constructor() {
-        super()
-
-        this.state = {
-            counter: 0
-        }
-    }
-
     render() {
-
-        let counter = this.state.counter
-        let fun = () => this.setState({
-            counter: counter
-        })
 
         const { name, live, title, img, category, categorySpecial, numberTweets, profile, profileName, username } = {
             name: "" ,
@@ -34,9 +21,6 @@ class SidebarCol extends React.Component {
             category: "" ,
             categorySpecial: "" ,
             numberTweets: "",
-            profile: "",
-            profileName: "",
-            username: "",
         };
 
         return (
@@ -46,6 +30,8 @@ class SidebarCol extends React.Component {
                     catchValueSearchUser={this.props.catchValueSearchUser}
                     valueSearchUser={this.props.valueSearchUser}
                     filteredSearchValue={this.props.filteredSearchValue}
+                    iconSearch={this.props.iconSearch}
+                    iconBadge={this.props.iconBadge}
                 />
                 <div className="container-trend">
                     <h3 className="container-trend__title">Que esta pasando</h3>
@@ -62,12 +48,15 @@ class SidebarCol extends React.Component {
                         this.props.sourceTrends.sort(function(b, a) {
                             return a.numberTweets - b.numberTweets
                         }).map( trend => {
-                            if(this.state.counter <= 3) {
-                                // this.state.counter++
                                 return (
-                                    <Trend category={trend.category} title={trend.title} numberTweets={trend.numberTweets} />
+                                    <Trend 
+                                        category={trend.category} 
+                                        title={trend.title} 
+                                        numberTweets={trend.numberTweets} 
+                                        quantityMoreMilFn={this.props.quantityMoreMilFn}
+                                        iconDots={this.props.iconDots}
+                                    />
                                 )
-                            }
                         })
                         
                     }

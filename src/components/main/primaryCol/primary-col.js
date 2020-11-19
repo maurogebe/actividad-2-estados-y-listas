@@ -2,8 +2,6 @@ import React from 'react';
 import PostTweet from './postTweet/post-tweet';
 import Feed from './feed/feed';
 
-// Importando base de datos
-// import {feed} from '../../../source';
 
 // Importando estilos
 import './styles.css'
@@ -36,6 +34,13 @@ class PrimaryCol extends React.Component {
                                 showContext={this.props.showContext}
                                 contextOptions={tweet.contextOptions}
                                 editTweet={this.props.editTweet}
+                                iconsOutline={this.props.iconsOutline}
+                                iconsSolid={this.props.iconsSolid}
+                                iconDots={this.props.iconDots}
+                                iconTrash={this.props.iconTrash}
+                                iconPencil={this.props.iconPencil}
+                                iconBadge={this.props.iconBadge}
+                                quantityMoreMilFn={this.props.quantityMoreMilFn}
                             />
                         )
                     })

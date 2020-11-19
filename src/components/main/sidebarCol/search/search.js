@@ -7,25 +7,10 @@ import './styles.css'
 import Icon from '../../../global/icon/icon'
 import SearchDropdown from './filter-user/searchDropdown'
 
-// Importando base de datos
-import { feed } from '../../../../source'
-
-// Importando Iconos
-import {
-    SearchOutline,
-    BadgeCheckSolid
-} from "@graywolfai/react-heroicons";
-
 class Search extends React.Component {
 
     constructor() {
         super()
-
-        this.state = {
-            user: feed,
-            icon: <SearchOutline />,
-            iconBadge: <BadgeCheckSolid />,
-        }
         this.catchValue = this.catchValue.bind(this)
     }
 
@@ -45,7 +30,7 @@ class Search extends React.Component {
 
         return (
             <div className="container-search">
-                <Icon source={this.state.icon} iconModifier={'container-search__icon'} />
+                <Icon source={this.props.iconSearch} iconModifier={'container-search__icon'} />
                 <input className="container-search__input" onChange={this.catchValue} type="text" id="search" placeholder="Buscar en Twitter" value={value} />
                 <div className="container-search-user">
                     {
@@ -68,7 +53,7 @@ class Search extends React.Component {
                                     profileUrl={user.profileName}
                                     profile={user.profile}
                                     username={user.username}
-                                    iconBadge={this.state.iconBadge}
+                                    iconBadge={this.props.iconBadge}
                                     filteredSearchValue={this.props.filteredSearchValue}
                                 />
                             )
